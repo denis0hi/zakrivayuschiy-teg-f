@@ -1,1 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'PressStart2P', fantasy;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-variation-normal: 'wght' var(--font-weight-normal);
+  --font-variation-bold: 'wght' var(--font-weight-bold);
+  --font-size-title: clamp(3.0625rem, 1.9348rem + 4.8632vw, 4.0625rem);
+  --font-size-text: clamp(0.875rem, 0.2407rem + 2.7356vw, 1.4375rem);
+  --main-text-size: 14px;
+  --main-title-size: 18px;
+  --bg-image: url("../images/background.png");
+  --section-width: clamp(375px, 80%, 700px);
+  --stroke-color: rgba(255, 255, 255, 0.8);
+  --heart-contour-color: #000000;
+  --heart-main-body-color :#FF0000;
+  --background-color-white:#ffffff;
+  --main-border: 2px solid black;
+  ;
+}
