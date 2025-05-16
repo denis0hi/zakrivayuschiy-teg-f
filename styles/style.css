@@ -15,10 +15,11 @@
   min-block-size: 100vh;
   font-family: var(--font-main);
   font-variation-settings: var(--font-variation-normal);
-  width: 100%;
-  margin: auto;
-  margin-top: 100px;
-  background: repeating-linear-gradient(
+  inline-size: 100%;
+  margin-inline: auto;
+  margin-block-start: 100px;
+  background-color: #1a1a1a;
+  background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3,
       #d3d3d3 2px,
@@ -32,7 +33,7 @@
       transparent 2px,
       transparent 4px
     ),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%), var(--bg-image);
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -40,8 +41,9 @@
 }
 
 .header__title {
-  width: var(--section-width);
-  height: 368px;
+  min-inline-size: 320px;
+  max-inline-size: 696px;
+  padding: 128px 120.5px;
   margin: auto;
   margin-bottom: 100px;
   display: flex;
@@ -49,19 +51,19 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background: var(--background-color-white);
+  background: white;
   border: var(--main-border);
   font-family: var(--font-accent);
 }
 
-.header__title h1 {
+.header__title-heading {
   font-size: var(--font-size-title);
   line-height: 100%;
   vertical-align: bottom;
   text-transform: uppercase;
 }
 
-.header__title p {
+.header__title-text {
   font-size: var(--font-size-text);
   line-height: 100%;
   text-transform: uppercase;
@@ -79,18 +81,17 @@
   min-width: 375px;
   padding: 0;
   border: var(--main-border);
-  background-color: var(--background-color-white);
+  background-color: white;
 }
 
 .article__title {
-  height: 25px;
   font-family: var(--font-main);
   font-size: var(--main-title-size);
   font-variation-settings: var(--font-variation-bold);
-  line-height: 100%;
+  line-height: 1;
   display: flex;
   align-items: center;
-  margin: 3px 24px 3px 10px;
+  margin: 6px 24px 7px 10px;
 }
 
 .image-container {
@@ -107,29 +108,18 @@
 }
 
 .image-label {
-  content: "";
   position: absolute;
   top: 25px;
   right: 25px;
-  opacity: 50%;
+  opacity: 0.5;
   font-family: var(--font-accent);
   font-size: var(--main-text-size);
+  color: rgb(0, 0, 0);
   text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
     -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
-  -webkit-background-clip: text;
+  margin: 0;
+  z-index: 1;
   mix-blend-mode: hard-light;
-  paint-order: stroke fill;
-}
-
-.image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  mix-blend-mode: hard-light;
-  pointer-events: none;
 }
 
 .article__content {
@@ -153,6 +143,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: 0.3s ease-in-out;
   z-index: 1;
 }
 
@@ -179,6 +170,7 @@
   padding: 0;
   background-color: #fff;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .button:hover::before {
@@ -192,6 +184,7 @@
   align-items: center;
   background-color: transparent;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .card__icon-button:focus-visible {
@@ -229,12 +222,12 @@
   outline: none;
 }
 
-footer {
+.button__save {
   display: flex;
   margin: auto;
 }
 
-.footer__button-floppy {
+.button__save-floppy {
   width: 335px;
   height: 55px;
   margin: 50px auto 103px;
@@ -288,31 +281,31 @@ footer {
   height: 39px;
 }
 
-.dark-mystery {
+.image__filter-dark-mystery {
   filter: grayscale(80%) brightness(0.6);
 }
 
-.warm-nostalgia {
+.image__filter-warm-nostalgia {
   filter: sepia(70%) hue-rotate(10deg);
 }
 
-.cold-detachment {
+.image__filter-cold-detachment {
   filter: blur(1px) hue-rotate(180deg);
 }
 
-.vibrant-joy {
+.image__filter-vibrant-joy {
   filter: brightness(1.2) saturate(200%);
 }
 
-.dreamy-surreal {
+.image__filter-dreamy-surreal {
   filter: contrast(150%) drop-shadow(0 0 10px purple);
 }
 
-.anxious-tension {
+.image__filter-anxious-tension {
   filter: invert(20%) contrast(130%);
 }
 
-.complex-mood {
+.image__filter-complex-mood {
   filter: sepia(50%) blur(0.5px) brightness(0.9);
 }
 
@@ -320,107 +313,16 @@ footer {
   opacity: 0;
 }
 
-.heart {
-  width: 100px;
-  height: 100px;
-  padding: 0;
-}
-
 .contour {
-  width: 100px;
-  height: 100px;
-  padding: 0;
-}
-
-.like-icon:hover .core {
-  fill: var(--heart-contour-color);
-  transition: fill 0.3s ease 0s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--heart-contour-color);
-  transition: fill 0.3s ease 0.05s;
-}
-
-.like-icon:not(:hover) .core {
-  fill: transparent;
-  transition: fill 0.3s ease 0.03s;
-}
-
-.like-icon:not(:hover) .main-body {
-  fill: transparent;
-  transition: fill 0.3s ease 0s;
-}
-
-.like-icon:active .core {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s ease 0s;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s ease 0.03s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s ease 0s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s ease 0.03s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s ease 0.06s;
-}
-
-.like-icon.is-liked {
-  animation: heart-scale 0.3s ease-in 0.1s 1 forwards;
-}
-
-@keyframes heart-scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks-appear 0.3s ease-in 0.3s 1 forwards;
-}
-
-@keyframes sparks-appear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.like-icon:not(.is-liked) .contour {
-  fill: var(--heart-contour-color);
-  transition: fill 0.1s linear 0s;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (width <= 375px) {
   .header__title {
-    height: 327px;
+    padding: 120px 14px;
   }
 
   .article__title {
-    height: auto;
     margin: 5px 10px 5px;
     line-height: 117%;
   }
@@ -434,7 +336,7 @@ footer {
     width: 371px;
   }
 
-  .footer__button-floppy {
+  .button__save-floppy {
     width: 306px;
     height: 84px;
     flex-direction: column;

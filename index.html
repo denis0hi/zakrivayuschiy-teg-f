@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
   </head>
   <body class="page">
     <header class="header">
       <div class="header__title">
-        <h1>&lt;/HTML&gt;</h1>
-        <p>закрывающий тег</p>
+        <h1 class="header__title-heading">&lt;/HTML&gt;</h1>
+        <p class="header__title-text">закрывающий тег</p>
       </div>
     </header>
     <main>
@@ -42,8 +43,8 @@
               </p>
               <p>Место для ваших воспоминаний о начале обучения.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -51,6 +52,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -76,10 +78,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -87,7 +89,7 @@
           <div class="image-container">
             <p class="image-label">&lt;/HTML&gt;</p>
             <img
-              class="image warm-nostalgia"
+              class="image image__filter-warm-nostalgia"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -105,8 +107,8 @@
               </p>
               <p>Место для ваших воспоминаний о начале первого спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -114,6 +116,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -139,10 +142,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -150,7 +153,7 @@
           <div class="image-container">
             <p class="image-label">&lt;css&gt;</p>
             <img
-              class="image cold-detachment"
+              class="image image__filter-cold-detachment"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -165,8 +168,8 @@
               </p>
               <p>Место для ваших воспоминаний об окончании первого спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -174,6 +177,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -199,10 +203,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -210,7 +214,7 @@
           <div class="image-container">
             <p class="image-label">&lt;desigions&gt;</p>
             <img
-              class="image vibrant-joy"
+              class="image image__filter-vibrant-joy"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -227,8 +231,8 @@
               </p>
               <p>Место для ваших воспоминаний о начале второго спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -236,6 +240,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -261,10 +266,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -272,7 +277,7 @@
           <div class="image-container">
             <p class="image-label">care</p>
             <img
-              class="image dreamy-surreal"
+              class="image image__filter-dreamy-surreal"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -290,8 +295,8 @@
               </p>
               <p>Место для ваших воспоминаний об окончании второго спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -299,6 +304,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -324,10 +330,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -335,7 +341,7 @@
           <div class="image-container">
             <p class="image-label">&lt;support&gt;</p>
             <img
-              class="image anxious-tension"
+              class="image image__filter-anxious-tension"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -350,8 +356,8 @@
               </p>
               <p>Место для ваших воспоминаний о начале третьего спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -359,6 +365,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -384,10 +391,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -395,7 +402,7 @@
           <div class="image-container">
             <p class="image-label">&lt;lifes-style: none;&gt;</p>
             <img
-              class="image dark-mystery"
+              class="image image__filter-dark-mystery"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -412,8 +419,8 @@
               </p>
               <p>Место для ваших воспоминаний об окончании третьего спринта.</p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -421,6 +428,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -446,10 +454,10 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
         <article class="main__section-article">
@@ -457,7 +465,7 @@
           <div class="image-container">
             <p class="image-label">&lt;experience&gt;</p>
             <img
-              class="image complex-mood"
+              class="image image__filter-complex-mood"
               src="./images/image.png"
               alt="фургон"
               loading="lazy"
@@ -478,8 +486,8 @@
                 чувствуете в этой точке пути.
               </p>
             </div>
-            <span class="card__buttons">
-              <button class="card__icon-button">
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="like" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -487,6 +495,7 @@
                   viewBox="0 0 39 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <g class="heart">
                     <path
@@ -512,27 +521,27 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
-            </span>
+            </div>
           </div>
         </article>
       </section>
+      <section class="button__save">
+        <button
+          class="button__save-floppy button"
+          type="button"
+          onclick="window['dialog-id'].showModal()"
+          aria-controls="dialog-id"
+        >
+          <svg class="floppy-icon" viewBox="0 0 21 21" width="21" height="21">
+            <use href="./svg/floppy.svg#floppy-icon"></use>
+          </svg>
+          <span class="button__text"> Сохранить на память</span>
+        </button>
+      </section>
     </main>
-    <footer>
-      <button
-        class="footer__button-floppy button"
-        type="button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
-      >
-        <svg class="floppy-icon" viewBox="0 0 21 21" width="21" height="21">
-          <use href="./svg/floppy.svg#floppy-icon"></use>
-        </svg>
-        <span class="button__text"> Сохранить на память</span>
-      </button>
-    </footer>
     <dialog id="dialog-id">
       <div class="dialog-title">
         <svg class="floppy__icon-dialog" viewBox="0 0 27 27">
@@ -540,8 +549,8 @@
         </svg>
         <p>Вставьте дискету, чтобы продолжить</p>
       </div>
-      <form>
-        <button class="dialog-button">ОК</button>
+      <form method="dialog">
+        <button class="dialog-button" type="submit">ок</button>
       </form>
     </dialog>
     <script src="./scripts/like.js"></script>

@@ -11,12 +11,10 @@
   --font-size-text: clamp(0.875rem, 0.2407rem + 2.7356vw, 1.4375rem);
   --main-text-size: 14px;
   --main-title-size: 18px;
-  --bg-image: url("../images/background.png");
   --section-width: clamp(375px, 80%, 700px);
-  --stroke-color: rgba(255, 255, 255, 0.8);
+  --stroke-color: rgba(255, 255, 255);
   --heart-contour-color: #000000;
   --heart-main-body-color :#FF0000;
-  --background-color-white:#ffffff;
   --main-border: 2px solid black;
   ;
 }
