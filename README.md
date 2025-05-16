@@ -1,1 +1,1 @@
-https://denis0hi.github.io/slozhno-sosredotochitsya-fd/
+https://github.com/denis0hi/zakrivayuschiy-teg-f
