@@ -9,6 +9,10 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.contour {
+  transition: fill 0.1s linear;
+}
+
 .like-icon:hover .core {
     fill: var(--heart-contour-color);
     transition: fill 0.3s ease 0s;

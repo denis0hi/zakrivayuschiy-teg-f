@@ -6,7 +6,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --font-variation-normal: 'wght' var(--font-weight-normal);
-  --font-variation-bold: 'wght' var(--font-weight-bold);
+  --font-variation-bold: 'whgt' var(--font-weight-bold);
   --font-size-title: clamp(3.0625rem, 1.9348rem + 4.8632vw, 4.0625rem);
   --font-size-text: clamp(0.875rem, 0.2407rem + 2.7356vw, 1.4375rem);
   --main-text-size: 14px;
